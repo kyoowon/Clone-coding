@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "outDir": "./dist",	//컴파일 후 js 파일들이 생성되는 곳
+    "rootDir": "./src",	//루트 폴더
+    "jsx": "react-jsx"
+  },
+  "include": ["**/*"], // ts로 할 파일
+  "exclude": ["node_modules", "client"] // 명령어를 제외할 파일
+}

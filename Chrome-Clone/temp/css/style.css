@@ -1,0 +1,135 @@
+.hidden {
+	display: none;
+}
+
+.profile {
+	width: 250px;
+	height: 250px;
+	margin-top: 10vh;
+	justify-self: center;
+	border-radius: 50%;
+	opacity:0.8;
+}
+
+body {
+	height: 100vh;
+	background-size: cover;
+}
+
+#header {
+	display: flex;
+	height: 5vh;
+	color: white;
+	justify-content:space-between;
+	align-items:flex-start;
+	text-shadow: 1px 1px 10px rgb(0, 0, 0);
+	user-select: none;
+}
+
+#container {
+	display: grid;
+	height: 90vh;
+	gap : 30px;
+    grid-template-rows: 240px 40px 30px 33%;
+	justify-content: center;
+	align-content: center;
+}
+
+#container .clock {
+	user-select: none;
+	text-shadow: 5px 5px 50px rgb(255, 255, 255);
+	font-size: 150px;
+	color: transparent;
+	-webkit-text-stroke: 1px #fff;
+}
+
+#login-form{
+	margin-top: 10vh;
+	justify-self: center;
+}
+
+#login-form input:last-child{
+	font-style:inherit;
+	color: cornsilk;
+	background-color: transparent;
+	border: 1px solid cornsilk;
+	border-radius:5px;
+	box-shadow: 1px 2px 3px 0px;
+}
+
+#greeting{
+	display:grid;
+	color: white;
+	user-select: none;
+	margin: 30px;
+	justify-content: center;
+	align-content: center;
+	text-shadow: 1px 1px 10px rgb(0, 0, 0);
+}
+
+#todo-form{
+	justify-self: center;
+}
+
+#todo-form input,  #login-form input:first-child{
+	color: white;
+	background-color: transparent;
+	width: 200px;
+	text-align: center;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color:white;
+    outline: none;
+}
+
+#todo-form input::placeholder, #login-form input:first-child::placeholder {
+	color: white;
+	text-shadow: 1px 1px 10px rgb(0, 0, 0);
+}
+
+#todo-form input:focus::placeholder,  #login-form input:first-child:focus::placeholder {
+    color: transparent;
+    text-shadow: none;
+}
+
+#todo-list{
+	color: white;
+	text-shadow: 1px 1px 10px rgb(0, 0, 0);
+	width: 30vh;
+	list-style: none;
+	justify-self: center;
+}
+
+#todo-list li{
+	font-size: 20px;
+	margin: 3px;
+}
+
+#todo-list button{
+	background-color: transparent;
+	border: 0 solid transparent;
+}
+
+#footer {
+	display: flex;
+	height: 5vh;
+	justify-content: center;
+	color: white;
+	font-style: italic;
+}
+
+#github-icon{
+	bottom:0; right:0;
+	position:absolute;
+	padding: 10px;
+	height: 40px;
+}
+
+#login-icon{
+	bottom:0; left: 0;
+	background: url("img/login.png");
+	position:absolute;
+	padding: 10px;
+	width: 30px;
+}

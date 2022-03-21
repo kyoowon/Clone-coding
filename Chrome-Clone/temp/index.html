@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css" />
+	<title>Chrome</title>
+</head>
+
+<body>
+	<div id="header">
+		<div>
+			<span id="city"></span><br>
+			<span id="weather"></span>
+		</div>
+		<span class="clock"></span>
+	</div>
+	<div id="container">
+		<h2 class="clock hidden"></h2>
+		<img class="profile" src="img/profile.png" alt="Avater">
+		<form id="login-form">
+			<input type="text" required maxlength="15" placeholder="What is your name?" />
+			<input id="submit-btn" type="submit" value="press" />
+		</form>
+		<h1 id="greeting" class="hidden"></h1>
+		<form id="todo-form" class="hidden">
+			<input type="text" placeholder="Write a To Do and Press Enter" required />
+		</form>
+		<ul id="todo-list" class="hidden">
+		</ul>
+	</div>
+	<div id="footer">
+		<p><a href="https://github.com/kyoowon"><img id="github-icon" src="img/githubicon.png"></a></p>
+		<p><a href="https://kyoowon.github.io/Chrome-Clone/"><img id="login-icon" src="img/login.png"></a></p>
+		<div id="quote">
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<script src="js/greetings.js"></script>
+	<script src="js/clock.js"></script>
+	<script src="js/quotes.js"></script>
+	<script src="js/background.js"></script>
+	<script src="js/todo.js"></script>
+	<script src="js/weather.js"></script>
+</body>
+
+</html>
