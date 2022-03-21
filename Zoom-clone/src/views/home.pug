@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Noom
+		style
+		//- link(rel="stylesheet", href="https://unpkg.com/mvp.css")
+		link(rel="stylesheet", href="public/stylesheets/style.css")
+	body
+		header
+			img(src="public/img/title.png", alt="title")
+		main
+			div#welcome
+				div#openRoom
+					p Open Room List
+					ul
+				form
+					p Write down your room number.
+					input(placeholder="room name input", required, type="text")#room_input
+					p Write a nickname.
+					input(placeholder="nickname input", required, type="text")#user_input
+					button Enter Room
+			div#room
+				div#roomContainer
+					div#niv
+						button#mute mute
+						button#camera Turn Camera off
+						select#cameras
+					div#divContainer
+						div#myStream
+							video#myFace(autoplay, playsinline)
+							video#peerFace(autoplay, playsinline)
+						div#chat
+							p
+							form#name
+								input(placeholder="nickname", required, type="text")
+								button Save
+							ul
+							form#msg
+								input(placeholder="message", required, type="text")
+								button Send
+		script(src="/socket.io/socket.io.js")
+		script(src="/public/js/app.js")
