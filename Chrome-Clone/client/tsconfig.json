@@ -23,5 +23,5 @@
     "jsx": "react-jsx"
   },
   "include": ["**/*"], // ts로 할 파일
-  "exclude": ["node_modules", "client"] // 명령어를 제외할 파일
+  "exclude": ["node_modules", "src/setupProxy.js"] // 명령어를 제외할 파일
 }

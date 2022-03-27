@@ -1,5 +1,6 @@
-import React, { ReactElement, useEffect } from 'react'
-import axios from 'axios'
+import React, { ReactElement, useEffect } from 'react';
+import axios from 'axios';
+import './LandingPage.scss';
 function LandingPage(): ReactElement {
     // axios를 통한 server에 요청
     useEffect(() => {
@@ -7,9 +8,9 @@ function LandingPage(): ReactElement {
     }, [])
 
     return (
-        <h1>hello
-            {console.log("check")}
-        </h1>
+        <div className = "landing">
+            <h1>시작 페이지</h1>
+        </div>
     )
 }
 

@@ -4,23 +4,13 @@ import App from './components/App';
 import { Provider } from 'react-redux'
 import { applyMiddleware, createStore, compose } from 'redux';
 import promiseMiddleware from 'redux-promise';
-import ReduxThunk from 'redux-thunk';
-import Reducer from './_reducers/index'
-const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore)
-
-declare global {
-  interface Window {
-  __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
-  }
-}
-  
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+import Reducer from './_reducers/index';
+import thunk from 'redux-thunk';
+import {composeWithDevTools} from 'redux-devtools-extension';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store = {createStoreWithMiddleware(Reducer, 
-            composeEnhancers()
-      )}>
+    <Provider store = {createStore(Reducer, composeWithDevTools(applyMiddleware(thunk, promiseMiddleware)))}>
     <App />
     </Provider>
   </React.StrictMode>,
