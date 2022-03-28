@@ -1,11 +1,19 @@
 import axios from 'axios'
-import {LOGIN_UESR} from './types'
+import {LOGIN_UESR, REGISTER_UESR} from './types'
+
 interface login {
     email : string,
     password : string
 }
 
-const loginUser = (dataTosubmit: login) => {
+interface register {
+    email : string,
+    name : string,
+    lastname : string,
+    password : string,
+}
+
+export function loginUser(dataTosubmit: login) {
     const request = axios.post('/api/users/login', dataTosubmit).then((response) => response.data)
 
     return {
@@ -14,4 +22,12 @@ const loginUser = (dataTosubmit: login) => {
     }
 }
 
-export default loginUser
+
+export function registerUser(dataTosubmit: register) {
+    const request = axios.post('/api/users/register', dataTosubmit).then((response) => response.data)
+
+    return {
+        type : REGISTER_UESR,
+        payload : request
+    }
+}

@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import './LoginPage.scss'
 import { useDispatch }from 'react-redux'
-import loginUser from '../../../_actions/user_action'
-import { response } from 'express'
+import {loginUser} from '../../../_actions/user_action'
 
 export const Login = () => {
     const dispatch = useDispatch()
