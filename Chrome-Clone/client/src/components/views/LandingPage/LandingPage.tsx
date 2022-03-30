@@ -7,8 +7,12 @@ function LandingPage(): ReactElement {
         axios.get('/api/hello').then((response) => console.log(response))
     }, [])
 
-    const onClickHandler = () => {
-        axios.get('/api/users/logout').then((response) => console.log(response.data))
+    function onClickHandler() {
+        axios.get('/api/users/logout').then((response) => {
+            // if(response.data.success) {
+            //     this.history.push('/login')
+            // }
+        })
     }
 
     return (
